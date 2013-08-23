@@ -1,0 +1,13 @@
+{
+"reponame":"sample-accelerometer",
+"title":"Rolling Can Accelerometer Demonstration",
+"tooltip":"This demo shows how an app might access the accelerometer of a native device using the JavaScript bridge library",
+"description"This demonstration application will use the JavaScript bridge to read the device's current accelerometer data and act on it.",
+"articleUrl":"",
+"keywords":["demo","accelerometer","orientation"],
+"visible" : "false",
+"highlights" : ["demo","accelerometer"],
+"apppreview":"true",
+"appname":"demo.accelerometernew",
+"relname":"4.0.0"
+}
