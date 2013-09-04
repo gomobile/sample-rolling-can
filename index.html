@@ -298,7 +298,10 @@ Copyright (c) 2011, 2012, 2013 Intel Corporation
 	    }
 
 	    function onDeviceReady() {
-        
+            //use viewport
+	        var landscapewidth = 1360;
+	        intel.xdk.display.useViewport(portrait_width, landscapewidth)
+			
             //lock orientation
             intel.xdk.device.setRotateOrientation("portrait");
             intel.xdk.device.setAutoRotate(false);
