@@ -4,9 +4,9 @@
 "tooltip":"This demo shows how an app might access the accelerometer of a native device using the JavaScript bridge library",
 "description":"This demonstration application will use the JavaScript bridge to read the device's current accelerometer data and act on it.",
 "articleUrl":"",
-"keywords":["demo","accelerometer","orientation"],
+"keywords":["accelerometer","intel.xdk API"],
 "visible" : "true",
-"highlights" : ["demo","accelerometer"],
+"highlights" : ["accelerometer","intel.xdk API"],
 "apppreview":"true",
 "appname":"demo.accelerometernew",
 "relname":"4.0.0"
