@@ -279,8 +279,19 @@ Copyright (c) 2011, 2012, 2013 Intel Corporation
 	        //basically, we're going to slide and rotate the can around on the screen based on the physics
 	        //computed in the previous funciton. The animation calls are really fairly simple ...
 	        //need to check that container and label have been initialized in case deviceready happens before load
-	        if(container!=null) container.style.webkitTransform = 'translate(' + current_left + 'px, ' + current_top + 'px) rotate(' + canangle + 'deg) scale(.85, .85)';
-	        if(label!=null) label.style.webkitTransform = 'translate(' + labelleft + 'px, 0px)';
+            
+            	if (intel.xdk.iswin8 || intel.xdk.iswp8)
+                	if(container!=null) container.style.transform = 'translate(' + current_left + 'px, ' + current_top + 'px) rotate(' + canangle + 'deg) scale(.85, .85)';
+            	else 
+                	if(container!=null) container.style.webkitTransform = 'translate(' + current_left + 'px, ' + current_top + 'px) rotate(' + canangle + 'deg) scale(.85, .85)';
+            
+            
+            	if (intel.xdk.iswin8 || intel.xdk.iswp8)
+                	if(label!=null) label.style.transform = 'translate(' + labelleft + 'px, 0px)';
+            	else
+                	if(label!=null) label.style.webkitTransform = 'translate(' + labelleft + 'px, 0px)';
+
+
 	    }
 
 
