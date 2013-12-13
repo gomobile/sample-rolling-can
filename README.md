@@ -1,4 +1,4 @@
-sample-accelerometer
+sample-rollingcan
 ====================
 This sample application demonstrates how to use the intel.xdk JavaScript bridge 
 library for accessing the device's accelerometer values for simulating a rolling can.
