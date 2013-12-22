@@ -1,12 +1,13 @@
 {
 "reponame":"sample-rollingcan",
 "title":"Rolling Can Accelerometer Demonstration",
+"abbr":"Rolling Can",
 "tooltip":"This demo shows how an app might access the accelerometer of a native device using the JavaScript bridge library",
 "description":"This demonstration application will use the JavaScript bridge to read the device's current accelerometer data and act on it.",
 "articleUrl":"http://software.intel.com/en-us/articles/intelr-xdk-rolling-can-sample",
-"keywords":["accelerometer","intel.xdk API"],
+"keywords":["Accelerometer","intel.xdk API"],
 "visible" : "true",
-"highlights" : ["accelerometer","intel.xdk API"],
+"highlights" : ["Accelerometer","intel.xdk API"],
 "apppreview":"true",
 "appname":"demo.accelerometernew",
 "relname":"4.0.0"
