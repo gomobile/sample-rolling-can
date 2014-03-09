@@ -1,3 +1,5 @@
+/*jslint browser:true, devel:true, white:true, vars:true, eqeq:true */
+/*global $:false, intel:false*/
 var portrait_width = 768;
 var landscape_width = 1024;
 
@@ -75,7 +77,7 @@ function docanphysics(a) {
     }
 
     //skip the calculations if there is no movement;
-    if (absx == absy && absx == 0) {
+    if (absx == absy && absx === 0) {
         return;
     }
     var opp;
@@ -255,10 +257,10 @@ function suc(a) {
         transformProp = 'transform';
     }
 
-    if (container != null) {
+    if (container !== null) {
         container.style[transformProp] = 'translate(' + current_left + 'px, ' + current_top + 'px) rotate(' + canangle + 'deg) scale(.85, .85)';
     }
-    if (label != null) {
+    if (label !== null) {
         label.style[transformProp] = 'translate(' + labelleft + 'px, 0px)';
     }
 }
@@ -272,7 +274,7 @@ var watchAccel = function() {
         var opt = {};
         opt.frequency = 5;
         //opt.frequency = 1000;
-        timer = intel.xdk.accelerometer.watchAcceleration(suc, opt);
+        var timer = intel.xdk.accelerometer.watchAcceleration(suc, opt);
 
     };
 
