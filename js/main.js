@@ -221,7 +221,8 @@ function suc(a) {
     //e.g. in the X plane -1 = tilted all the way left, 1 = tilted all the way right.
     //e.g. in the Y plane -1 = tilted all the way left, 1 = tilted all the way right.
     //  document.getElementById('accel_x').innerHTML = "a.x = " + a.x + ", a.y = " + a.y;
-    docanphysics(a);
+//    console.log("in succession "+a.x);
+	docanphysics(a);
 
     //make sure the can isn't off the screen
     current_left = Math.max(current_left, 0);
