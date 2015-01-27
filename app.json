@@ -1,5 +1,5 @@
 {
-"reponame":"sample-rollingcan",
+"reponame":"sample-rolling-can",
 "title":"Rolling Can Accelerometer Demonstration",
 "abbr":"Rolling Can",
 "tooltip":"This demo shows how an app might access the accelerometer of a native device using the JavaScript bridge library",
