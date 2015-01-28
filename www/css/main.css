@@ -1,0 +1,367 @@
+/******************GLOBAL**************************/
+@-ms-viewport {
+    width: device-width;
+}
+
+html { 
+	width:100%; height:100%;
+	overflow-x:hidden;
+	font-family:Helvetica, Arial, sans-serif; 
+	-webkit-text-size-adjust:100%; 
+}
+
+* { 
+	margin:0; padding:0; 
+	-webkit-box-sizing:border-box; box-sizing:border-box;
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-touch-action:none;
+}
+
+img { 
+    border:none; 
+}
+
+body {
+	width:100%;	height:100%;
+    overflow:hidden;
+    -webkit-user-select:none;
+    font-family:"AmbleRegular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+input,textarea {
+    -webkit-user-select:text;
+    -moz-user-select:text;
+}
+
+::selection { 
+	background:#aaa; 
+	color:#fff; 
+}
+
+a:focus, a:active, a:hover { 
+    outline:0; 
+}
+
+.clear { 
+    clear:both;
+}
+
+.wrapper { 
+    float:left; 
+}
+
+/******************* SMARTPHONE [DEFAULT STYLES] **************************/
+.masthead {
+	background-color:white;
+    height:50px;
+    width:100%;
+    position: absolute;
+    top:0px;
+}
+
+.logo {
+    float:left;
+    margin:10px;
+}
+
+#bottombar {
+    width: 100%;
+    height: 65px; 
+    background-image:-webkit-gradient(linear,121% -17%,-37% 136%,color-stop(0.12, rgb(238,238,238)),color-stop(0.86, rgb(187,187,187)));
+    background-image:-webkit-linear-gradient(-169deg,rgb(238,238,238) 12%,rgb(187,187,187) 86%);
+    background-image:-ms-linear-gradient(-169deg,rgb(238,238,238) 12%,rgb(187,187,187) 86%);
+    background-image:linear-gradient(259deg,rgb(238,238,238) 12%,rgb(187,187,187) 86%);
+    position: absolute;
+    bottom: 0px;
+    overflow:hidden;
+}
+
+.content {
+    display:block;
+    width:100%; height:100%;
+	background-image:-webkit-gradient(linear,color-stop(0.01, rgb(0,84,154)),color-stop(0.16, rgb(2,90,160)),color-stop(1, rgb(11,125,193)));
+	background-image:-webkit-linear-gradient(rgb(0,84,154) 1%,rgb(2,90,160) 16%,rgb(11,125,193) 100%);
+	background-image:-ms-linear-gradient(rgb(0,84,154) 1%,rgb(2,90,160) 16%,rgb(11,125,193) 100%);
+	background-image:linear-gradient(rgb(0,84,154) 1%,rgb(2,90,160) 16%,rgb(11,125,193) 100%);
+	background:rgb(0,84,154) url("../images/swoops.png") no-repeat;
+    background-position:bottom center;text-align:center;
+    -webkit-background-size:cover; background-size:cover;padding-top:60px;
+}
+
+.headline {
+    display:inline-block;
+    width:100%;      
+    color:rgb(255,255,255);
+    font-family:"AmbleRegular";
+    font-size:52px;
+    line-height:120%;
+    text-shadow:3px 3px 0px rgba(0,55,100,0.8);
+}
+
+.headline.caviardreams {
+    font-family:"Caviardreams_Regular";
+}
+.headline.ptserif {
+    font-family:"Ptserif_Regular";
+}
+.headline.lmroman {
+    font-family:"Caviardreams_Regular";
+}
+.font.colour {
+    color: rgb(17,125,193);
+}
+.quote {
+    font-family: "AmbleRegular";
+    font-size: 18px;
+    line-height: 120%;
+    color: rgb(255,255,255);
+    text-transform: uppercase;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.quote.caviardreams {
+    font-family:"Caviardreams_Regular";
+}
+.quote.ptserif {
+    font-family:"Ptserif_Regular";
+}
+.quote.lmroman {
+    font-family:"Latinmodernroman10_Regular";
+}
+
+.subheading {
+    font-family:"AmbleBold";
+    font-size: 21px;
+    font-weight:bold;
+    line-height:120%;
+    color:rgb(255,255,255);
+    text-align:left;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.subheading.caviardreams {
+    font-family:"Caviardreams_Bold";
+}
+.subheading.ptserif {
+    font-family:"Ptserif_Bold";
+}
+.subheading.lmroman {
+    font-family:"Latinmodernroman10_Bold";
+}
+
+.bodytext {
+    font-family: "AmbleRegular";
+    font-size: 15px;
+    line-height: 120%;
+    color: rgb(255,255,255);
+    text-align: left;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.bodytext.caviardreams {
+    font-family:"Caviardreams_Regular";
+}
+.bodytext.ptserif {
+    font-family:"Ptserif_Regular";
+}
+.bodytext.lmroman {
+    font-family:"Latinmodernroman10_Regular";
+}
+
+.emailinput {
+    background-color: rgb(255,255,255);
+    width: 185px;
+    height: 33px;
+    border-color: rgb(135,135,135);
+    border-width: 1px;
+    border-style: solid;
+    -webkit-box-shadow: 0px 1px 10px rgba(0,0,0,0.45);
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.45);
+    font-family: "AmbleItalic";
+    font-size: 15px;
+    font-style: italic;
+    line-height: 120%;
+    color: rgb(0,121,197);
+    padding-left: 10px;
+    position: absolute;
+    left: 20px;
+}
+
+.emailinput.caviardreams {
+    font-family:"Caviardreams_Italic";
+}
+.emailinput.ptserif {
+    font-family:"Ptserif_Italic";
+}
+.emailinput.lmroman {
+    font-family:"Latinmodernroman10_Italic";
+}
+
+.button {
+    background-image: -webkit-gradient(linear,35% -1%,35% 141%,color-stop(0.12, rgb(255,255,255)),color-stop(0.86, rgb(166,168,171)));
+    background-image: -webkit-linear-gradient(-90deg,rgb(255,255,255) 12%,rgb(166,168,171) 86%);
+    background-image: -ms-linear-gradient(-90deg,rgb(255,255,255) 12%,rgb(166,168,171) 86%);
+    background-image: linear-gradient(180deg,rgb(255,255,255) 12%,rgb(166,168,171) 86%);
+    width: 84px;
+    height: 32px;
+    padding: 5px;
+    border-color: rgb(255,255,255);
+    border-width: 1px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    border-style: solid;
+    -webkit-box-shadow: 0px 1px 7px rgba(0,0,0,0.65);
+    box-shadow: 0px 1px 7px rgba(0,0,0,0.65);
+    font-family: "AmbleBold";
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 120%;
+    color: rgb(17,125,193);
+    text-align: center;
+    text-shadow: 0px 1px 0px rgb(255,255,255);
+    position: absolute;
+    right: 10px;
+}
+
+.button.caviardreams {
+    font-family:"Caviardreams_Bold";
+}
+.button.ptserif {
+    font-family:"Ptserif_Bold";
+}
+.button.lmroman {
+    font-family:"Latinmodernroman10_Bold";
+}
+
+.button:active, .button:focus {
+    background-color:#fff; 
+}
+
+.bottombarelements {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -28px;
+    margin-left: -123px;
+}
+
+.font {
+    font-size:40px;
+    color:rgb(134,134,134);
+    text-shadow:2px 2px 0px rgba(255,255,255,0.8); 
+    display: inline-block;
+    cursor: pointer;
+}
+
+#type1 {
+    font-family:"AmbleRegular";
+}
+#type2 {
+    font-family:"Caviardreams_Regular";
+}
+#type3 {
+    font-family:"PTserif_Regular";
+}
+#type4 {
+    font-family:"Latinmodernroman10_Regular";
+}
+
+.seperator {
+    display:inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/************************ TABLET **************************/
+@media handheld,  screen and (min-width: 600px) and (min-height:640px), 
+only screen and (min-height: 440px) and (min-width:900px) {
+
+    .masthead { 
+        height:75px; 
+    }
+
+    .logo {
+        width:84px;
+        height:55px;
+        margin:10px;   
+    }
+
+    .content { 
+        height:100%;
+        background:rgb(0,84,154) url("../images/swoops-lg.png") no-repeat;
+        background-position:bottom center;
+        -webkit-background-size:cover; background-size:cover;padding-top:100px;
+    }
+
+    .headline { 
+        font-size:120px;
+        text-shadow:3px 3px 0px rgba(0,55,100,0.8);
+    }
+    
+    .quote {
+        font-size:36px;
+    }
+
+    .subheading {
+        font-size: 40px;
+        padding-left: 40px;
+        padding-top: 30px;
+    }
+
+    .bodytext {
+        font-size: 32px;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .emailinput {
+        width:312px;
+        height:53px;
+        font-size:25px;
+        left: 40px;
+    }
+
+    .button {
+        background-image:-webkit-gradient(linear,18% -1%,18% 110%,color-stop(0.12, rgb(255,255,255)),color-stop(0.86, rgb(166,168,171)));
+        width:159px;
+        height:49px;
+        -webkit-border-radius:15px;
+        border-radius:15px;
+        font-size:25px;
+        right: 40px;
+    }
+
+    #bottombar {
+        width: 100%;
+        height:95px; 
+        background-image:-webkit-gradient(linear,100% 5%,0% 111%,color-stop(0.12, rgb(238,238,238)),color-stop(0.86, rgb(187,187,187)));
+        background-image:-webkit-linear-gradient(-173deg,rgb(238,238,238) 12%,rgb(187,187,187) 86%);
+        background-image:-ms-linear-gradient(-173deg,rgb(238,238,238) 12%,rgb(187,187,187) 86%);
+        background-image:linear-gradient(263deg,rgb(238,238,238) 12%,rgb(187,187,187) 86%);
+    }
+
+    .font {
+        font-size: 70px;
+    }
+
+    .seperator {
+        margin-left:20px;
+        margin-right:20px;
+    }
+
+    .image {
+        height:59px;
+    } 
+
+    .bottombarelements {
+        margin-top: -60px;
+        margin-left: -214px;
+    }
+}

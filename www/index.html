@@ -1,80 +1,57 @@
-<!DOCTYPE html> 
+<!DOCTYPE html><!--HTML5 doctype-->
 <html>
-<!--
-Copyright (c) 2011, 2012, 2013 Intel Corporation
-
- Permission is hereby granted, free of charge, to any person
- obtaining a copy of this software and associated documentation
- files (the "Software"), to deal in the Software without
- restriction, including without limitation the rights to use,
- copy, modify, merge, publish, distribute, sublicense, and/or sell
- copies of the Software, and to permit persons to whom the
- Software is furnished to do so, subject to the following
- conditions:
-
- The above copyright notice and this permission notice shall be
- included in all copies or substantial portions of the Software.
-
- THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
- EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
- OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
- NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
- HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
- WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
- FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
- OTHER DEALINGS IN THE SOFTWARE.
--->
     <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+        <script>
+            (function () {
+            if ("-ms-user-select" in document.documentElement.style && navigator.userAgent.match(/IEMobile\/10\.0/)) 
+			{
+                var width = window.innerWidth;
+                var height = window.innerHeight;
+                var msViewportStyle = document.createElement("style");
+                msViewportStyle.appendChild(
+                    document.createTextNode(" @media screen and (orientation: landscape) {@-ms-viewport{width:auto!important}}")
+                );
+                msViewportStyle.appendChild(
+                    document.createTextNode(" @media screen and (orientation: portrait) {@-ms-viewport{width:auto!important;height:" + width + "px! important}}")
+                );
+                document.getElementsByTagName("head")[0].appendChild(msViewportStyle);
 
-	<title>Accelerometer</title> 
-	<script src='intelxdk.js'></script>
-    <script src='cordova.js'></script> 
-    <script src='xhr.js'></script>
-    <script type="text/javascript" src="js/main.js"></script>  
-        
-    <style type="text/css">
-        * { -webkit-user-select:none; -webkit-tap-highlight-color:rgba(255, 255, 255, 0); -ms-touch-action:none;} 
-        input, textarea  { -webkit-user-select:text; } 
-        body { color:White;font-family:Arial; }
-    </style>
-
-</head> 
-<body onload="onBodyLoad()" background="images/app_bg.jpg"> 
-
-<div id="div_sodacan" style="position:absolute;width:178px;height:336px;overflow:hidden;-webkit-transform:  scale(0.85);">
-    <div id="img_sodacan" style="position:absolute;left:-2px;top:-1px;z-index:101;">
-	
-     <img  src="images/can_limegrn.png" alt=""  /> 
-<!--
-     <img  src="images/can_doug.png" alt=""  /> 
--->	 
-	 
-     </div>
-     <div  style="position:absolute;left:2px;top:51px;z-index:100;width:164px;height:237px;overflow:hidden" >
-	 
-	    <img id="img_sodalabel" src="images/generic-label.jpg" style="position:absolute;" alt="" /> 
-
-<!--
-	    <img id="img_sodalabel" src="images/doug-label.jpg" style="position:absolute;" alt="" /> 
--->
-		
-		
-     </div>
-</div> 	
-	
-<div style="position:absolute;left:764px;top:500px">
-	<dl id="accel-data">
-      <dt></dt><dd id="accel_x">&nbsp;</dd>
-      <dt></dt><dd id="accel_y">&nbsp;</dd>
-      <dt></dt><dd id="accel_z">&nbsp;</dd>
-    </dl>
+            }
+			})();
+        </script>
+        <title>Demo - Fonts</title>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+        <link href="css/fonts.css" rel="stylesheet" type="text/css" charset="utf-8" />
+        <link href="css/main.css" rel="stylesheet" type="text/css">
+        <script src="intelxdk.js"></script>
+        <script src='cordova.js'></script> 
+        <script src='xhr.js'></script>
+        <script src="js/main.js" type="text/javascript"></script>
+    </head>
     
-    <!--input type="button" value="LEFT" onclick="suc(nax);" />
-		<input type="button" value="RIGHT" onclick="suc(pax)" />
-			<input type="button" value="UP" onclick="suc(nay);" />
-		<input type="button" value="DOWN" onclick="suc(pay);" /-->
-
-	 </div>
-</body> 
+    <body>
+        <div class="masthead">
+            <img class="logo" src="images/logo.png"/>
+        </div>
+        <div class="content">
+            <div class="headline" id="head_line">Typefaces</div>
+            <div class="quote" id="quotes">"THE QUICK RED FOX JUMPS OVER THE LAZY BROWN DOG"</div><br/>
+            <div class="subheading" id="sub_heading">Sub-Heading</div>
+            <div class="bodytext" id="body_text">Lorem ipsum dolor sit amet, sit amet viverra lorem. Consectetur adipiscing elit. Suspendisse posuere dapibus justo, velit accumsan. Etiam in masa ligula. Nunc euismod comodo blandit.</div><br/>
+            <div><input type="text" placeholder="Textfield" class="emailinput" id="email_input" />
+            <div class="button" id="buttonid">Button</div></div>
+        </div>
+        <div id="bottombar">
+            <div class="bottombarelements">
+                <div class="font" id="type1" onclick="changeambleregular()">Tt</div>
+                <div class="seperator"> <img class="image" src="images/Spacer-Phone.png"></img></div>
+                <div class="font" id="type2" onclick="changecaviardreamsregular()">Tt</div>
+                <div class="seperator"> <img class="image" src="images/Spacer-Phone.png"></img></div>
+                <div class="font" id="type3" onclick="changeptserifregular()">Tt</div>
+                <div class="seperator"> <img class="image" src="images/Spacer-Phone.png"></img></div>
+                <div class="font" id="type4" onclick="changelmromanregular()">Tt</div>
+            </div>
+        </div>
+    </body>
 </html>

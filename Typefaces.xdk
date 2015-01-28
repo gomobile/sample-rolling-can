@@ -5,11 +5,11 @@
       "type": "Demo",
       "createDefaultBuildConfigs": true,
       "projectTypeName": "com.intel.xdk.projecttype.jsapp",
-      "src": "https://edge-intel.s3.amazonaws.com/samples/production/sample-rollingcan/sample.zip",
+      "src": "https://edge-intel.s3.amazonaws.com/samples/production/sample-typefaces/sample.zip",
       "sourceDirectory": "www",
-      "projectGuid": "cd57d50a-0949-4467-8062-357b172c2ef1",
-      "lastModifiedDate": 1407988671521,
-      "creationDate": 1407987762561
+      "projectGuid": "c9738778-93a0-4a8e-ab13-3e9204262e62",
+      "lastModifiedDate": 1407990389294,
+      "creationDate": 1407989968848
     },
     "sourceDirectory": "www",
     "cordovaPluginsDirectory": "plugins",
@@ -46,30 +46,6 @@
         "selectedState": "Included",
         "data": {},
         "paramvals": {}
-      },
-      {
-        "id": "intel.xdk.accelerometer",
-        "selectedState": "Included",
-        "data": {},
-        "paramvals": {}
-      },
-      {
-        "id": "intel.xdk.device",
-        "selectedState": "Included",
-        "data": {},
-        "paramvals": {}
-      },
-      {
-        "id": "intel.xdk.display",
-        "selectedState": "Included",
-        "data": {},
-        "paramvals": {}
-      },
-      {
-        "id": "intel.xdk.base",
-        "selectedState": "Included",
-        "data": {},
-        "paramvals": {}
       }
     ],
     "serviceMethods": [],
@@ -78,13 +54,13 @@
         "platform_": "android",
         "name_": "Android",
         "preferences_": {
-          "Orientation": "portrait",
           "android-minSdkVersion": "10",
-          "android-targetedSdkVersion": "19"
+          "android-targetedSdkVersion": "19",
+          "Orientation": "portrait"
         },
         "isActive_": true,
-        "appName_": "RollingCan",
-        "appID_": "xdk.sample.rollingcan",
+        "appName_": "Typefaces",
+        "appID_": "xdk.sample.typefaces",
         "appAccess_": "*",
         "icons_": [],
         "splashes_": [],
@@ -95,20 +71,20 @@
         "crosswalkVersion_": "stable",
         "appVersion_": "0.0.1",
         "runtime_": "Cordova 3.x",
-        "appDescription_": "This demonstration application will use the JavaScript bridge to read the device's current accelerometer data and act on it.",
+        "appDescription_": "An application to demonstrate how to include unique fonts in an HTML5 app.",
         "appVersionCode_": "1"
       },
       "Android-Crosswalk": {
         "platform_": "android",
         "name_": "Android-Crosswalk",
         "preferences_": {
-          "Orientation": "portrait",
           "android-minSdkVersion": "14",
-          "android-targetedSdkVersion": "19"
+          "android-targetedSdkVersion": "19",
+          "Orientation": "portrait"
         },
         "isActive_": true,
-        "appName_": "RollingCan",
-        "appID_": "xdk.sample.rollingcan",
+        "appName_": "Typefaces",
+        "appID_": "xdk.sample.typefaces",
         "appAccess_": "*",
         "icons_": [],
         "splashes_": [],
@@ -119,7 +95,8 @@
         "crosswalkVersion_": "stable",
         "appVersion_": "0.0.1",
         "runtime_": "Crosswalk with Cordova 3.x",
-        "appDescription_": "This demonstration application will use the JavaScript bridge to read the device's current accelerometer data and act on it.",
+        "appDescription_": "An application to demonstrate how to include unique fonts in an HTML5 app.",
+        "appAuthor_": "",
         "appVersionCode_": "1"
       },
       "iOS": {
@@ -130,8 +107,8 @@
           "Orientation": "portrait"
         },
         "isActive_": true,
-        "appName_": "RollingCan",
-        "appID_": "xdk.sample.rollingcan",
+        "appName_": "Typefaces",
+        "appID_": "xdk.sample.typefaces",
         "appAccess_": "*",
         "icons_": [],
         "splashes_": [],
@@ -142,7 +119,7 @@
         "crosswalkVersion_": "stable",
         "appVersion_": "0.0.1",
         "runtime_": "Cordova 3.x",
-        "appDescription_": "This demonstration application will use the JavaScript bridge to read the device's current accelerometer data and act on it."
+        "appDescription_": "An application to demonstrate how to include unique fonts in an HTML5 app."
       },
       "Windows8": {
         "platform_": "windows8",
@@ -151,8 +128,8 @@
           "Orientation": "portrait"
         },
         "isActive_": true,
-        "appName_": "RollingCan",
-        "appID_": "xdk.sample.rollingcan",
+        "appName_": "Typefaces",
+        "appID_": "xdk.sample.typefaces",
         "appAccess_": "*",
         "icons_": [],
         "splashes_": [],
@@ -163,14 +140,14 @@
         "crosswalkVersion_": "stable",
         "appVersion_": "0.0.0.1",
         "runtime_": "Cordova 3.x",
-        "appDescription_": "This demonstration application will use the JavaScript bridge to read the device's current accelerometer data and act on it."
+        "appDescription_": "An application to demonstrate how to include unique fonts in an HTML5 app."
       },
       "WindowsPhone8": {
         "platform_": "wp8",
         "name_": "WindowsPhone8",
         "preferences_": {},
         "isActive_": true,
-        "appName_": "RollingCan",
+        "appName_": "Typefaces",
         "appID_": "not.yet.specified",
         "appAccess_": "*",
         "icons_": [],

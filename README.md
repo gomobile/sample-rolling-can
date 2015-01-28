@@ -1,24 +1,81 @@
-sample-rolling-can
-====================
-This sample application demonstrates how to use the intel.xdk JavaScript bridge 
-library for accessing the device's accelerometer values for simulating a rolling can.
+Fonts
+=====
+Fonts is an app to demonstrate how to use alternate fonts within your HTML5 app.
 
-Intel(R) XDK
+Intel(R) XDK 
 -------------------------------------------
 This sample is part of the Intel(R) XDK. 
-Please sign up at http://software.intel.com/en-us/html5.
-To see the technical detail of the sample, please visit the sample article page 
-at http://software.intel.com/en-us/articles/intelr-xdk-rolling-can-sample. 
+Please sign up the beta at http://software.intel.com/en-us/html5.
 
-Application Files
------------------
+
+Important App Files
+---------------------------
 * app.json
 * icon.png
 * index.html
-* readme.md
 * screenshot.png
+* js/main.js
+* images/logo.png
+* images/logo-lg.png
+* images/swoops.png
+* images/swoops-lg.png
+* images/Spacer-Phone.png
+* images/Spacer-Tablet.png
+* css/fonts.css
+* css/main.css
+* css/webfonts/Amble-Bold/Amble-Bold-webfont.eot
+* css/webfonts/Amble-Bold/Amble-Bold-webfont.svg
+* css/webfonts/Amble-Bold/Amble-Bold-webfont.ttf
+* css/webfonts/Amble-Bold/Amble-Bold-webfont.woff
+* css/webfonts/Amble-Italic/Amble-Italic-webfont.eot
+* css/webfonts/Amble-Italic/Amble-Italic-webfont.svg
+* css/webfonts/Amble-Italic/Amble-Italic-webfont.ttf
+* css/webfonts/Amble-Italic/Amble-Italic-webfont.woff
+* css/webfonts/Amble-Regular/Amble-Regular-webfont.eot
+* css/webfonts/Amble-Regular/Amble-Regular-webfont.svg
+* css/webfonts/Amble-Regular/Amble-Regular-webfont.ttf
+* css/webfonts/Amble-Regular/Amble-Regular-webfont.woff
+* css/webfonts/Caviardreams_Bold/Caviar_Dreams_Bold-webfont.eot
+* css/webfonts/Caviardreams_Bold/Caviar_Dreams_Bold-webfont.svg
+* css/webfonts/Caviardreams_Bold/Caviar_Dreams_Bold-webfont.ttf
+* css/webfonts/Caviardreams_Bold/Caviar_Dreams_Bold-webfont.woff
+* css/webfonts/Caviardreams_Italic/CaviarDreams_Italic-webfont.eot
+* css/webfonts/Caviardreams_Italic/CaviarDreams_Italic-webfont.svg
+* css/webfonts/Caviardreams_Italic/CaviarDreams_Italic-webfont.ttf
+* css/webfonts/Caviardreams_Italic/CaviarDreams_Italic-webfont.woff
+* css/webfonts/Caviardreams_Regular/CaviarDreams-webfont.eot
+* css/webfonts/Caviardreams_Regular/CaviarDreams-webfont.svg
+* css/webfonts/Caviardreams_Regular/CaviarDreams-webfont.ttf
+* css/webfonts/Caviardreams_Regular/CaviarDreams-webfont.woff
+* css/webfonts/Latinmodernroman10_Bold/lmroman10-bold-webfont.eot
+* css/webfonts/Latinmodernroman10_Bold/lmroman10-bold-webfont.svg
+* css/webfonts/Latinmodernroman10_Bold/lmroman10-bold-webfont.ttf
+* css/webfonts/Latinmodernroman10_Bold/lmroman10-bold-webfont.woff
+* css/webfonts/Latinmodernroman10_Italic/lmroman10-italic-webfont.eot
+* css/webfonts/Latinmodernroman10_Italic/lmroman10-italic-webfont.svg
+* css/webfonts/Latinmodernroman10_Italic/lmroman10-italic-webfont.ttf
+* css/webfonts/Latinmodernroman10_Italic/lmroman10-italic-webfont.woff
+* css/webfonts/Latinmodernroman10_Regular/lmroman10-regular-webfont.eot
+* css/webfonts/Latinmodernroman10_Regular/lmroman10-regular-webfont.svg
+* css/webfonts/Latinmodernroman10_Regular/lmroman10-regular-webfont.ttf
+* css/webfonts/Latinmodernroman10_Regular/lmroman10-regular-webfont.woff
+* css/webfonts/Ptserif_Bold/PTF75F-webfont.eot
+* css/webfonts/Ptserif_Bold/PTF75F-webfont.svg
+* css/webfonts/Ptserif_Bold/PTF75F-webfont.ttf
+* css/webfonts/Ptserif_Bold/PTF75F-webfont.woff
+* css/webfonts/Ptserif_Italic/PTF56F-webfont.eot
+* css/webfonts/Ptserif_Italic/PTF56F-webfont.svg
+* css/webfonts/Ptserif_Italic/PTF56F-webfont.ttf
+* css/webfonts/Ptserif_Italic/PTF56F-webfont.woff
+* css/webfonts/Ptserif_Regular/PTF55F-webfont.eot
+* css/webfonts/Ptserif_Regular/PTF55F-webfont.svg
+* css/webfonts/Ptserif_Regular/PTF55F-webfont.ttf
+* css/webfonts/Ptserif_Regular/PTF55F-webfont.woff
+* css/webfonts/Apache License.txt
 
-Copyright (c) 2012-2013, Intel Corporation. All rights reserved.
+License Information Follows
+---------------------------
+Copyright (c) 2013, Intel Corporation. All rights reserved.
 
 Redistribution and use in source and binary forms, with or without modification, 
 are permitted provided that the following conditions are met:
@@ -46,16 +103,10 @@ LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT
 OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 
-App Framework
---------------------------
+IMAGES
+-----------------------------------------------------------------------------
 
-* source:  http://app-framework-software.intel.com/
-* license:  https://github.com/01org/appframework/blob/master/license.txt
-
-
-IMAGES: *.png; images/*.png
-----------------------------------------------------------------------------
-all images are created by Intel Corp.
-they are licensed under the Creative Commons Attribution 3.0 license
+all images are created by Intel Corp. 
+they are licensed under the Creative Commons Attribution 3.0 license 
 http://creativecommons.org/licenses/by/3.0/us/
 
