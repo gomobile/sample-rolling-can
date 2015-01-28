@@ -10,5 +10,6 @@
 "highlights" : ["Accelerometer","intel.xdk API"],
 "apppreview":"true",
 "appname":"demo.accelerometernew",
-"relname":"4.0.0"
+"relname":"4.0.0",
+"projectTypeName": "com.intel.xdk.projecttype.jsapp"
 }
