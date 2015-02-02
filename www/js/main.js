@@ -243,17 +243,9 @@ function suc(a) {
     //basically, we're going to slide and rotate the can around on the screen based on the physics
     //computed in the previous funciton. The animation calls are really fairly simple ...
     //need to check that container and label have been initialized in case deviceready happens before load
-    //(polyfill) intel.xdk.iswin8 is not defined on all platforms - define if it is missing
-    if (intel.xdk.iswin8 === undefined) {
-        intel.xdk.iswin8 = false;
-    }
-    //(polyfill) intel.xdk.iswp8 is not defined on all platforms - define if it is missing
-    if (intel.xdk.iswp8 === undefined) {
-        intel.xdk.iswp8 = false;
-    }
     //use a variable to access the platform-appropriate transform property
     var transformProp = 'webkitTransform';
-    if (intel.xdk.iswin8 || intel.xdk.iswp8) {
+    if (device.platform.indexOf("Win") !== -1) {
         transformProp = 'transform';
     }
 
@@ -266,22 +258,25 @@ function suc(a) {
 }
 
 
-var fail = function() {};
+var fail = function() {
+    alert('onError!');
+};
 
 var watchAccel = function() {
 
 
         var opt = {};
-        opt.frequency = 5;
-        //opt.frequency = 1000;
-        var timer = intel.xdk.accelerometer.watchAcceleration(suc, opt);
+        //opt.frequency = 5;
+        opt.frequency = 5000;
+        //var timer = intel.xdk.accelerometer.watchAcceleration(suc, opt);
+        var timer = navigator.accelerometer.watchAcceleration(suc, fail, opt);
 
     };
 
 function onDeviceReady() {
     //use viewport
     var landscapewidth = 1360;
-    intel.xdk.display.useViewport(portrait_width, landscapewidth);
+    //intel.xdk.display.useViewport(portrait_width, landscapewidth);
 
     //lock orientation
     intel.xdk.device.setRotateOrientation("portrait");
@@ -291,12 +286,12 @@ function onDeviceReady() {
     intel.xdk.device.managePower(true, false);
 
     //hide splash screen
-    intel.xdk.device.hideSplashScreen();
+    navigator.splashscreen.hide();;
 
     watchAccel();
 }
 
-document.addEventListener("intel.xdk.device.ready", onDeviceReady, false);
+document.addEventListener("deviceready", onDeviceReady, false);
 
 function onBodyLoad() {
     metatag = document.getElementById("meta_view");
