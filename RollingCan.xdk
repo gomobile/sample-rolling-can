@@ -1,13 +1,13 @@
 {
   "project": {
-    "projectSettingsVersion": "1.1",
+    "projectSettingsVersion": "1.2",
     "creationData": {
       "type": "Demo",
       "createDefaultBuildConfigs": true,
       "projectTypeName": "com.intel.xdk.projecttype.jsapp",
       "src": "https://edge-intel.s3.amazonaws.com/samples/production/sample-rollingcan/sample.zip",
       "sourceDirectory": "www",
-      "projectGuid": "cd57d50a-0949-4467-8062-357b172c2ef1",
+			"projectGuid": "00000000-0000-0000-0000-000000000000",
       "lastModifiedDate": 1407988671521,
       "creationDate": 1407987762561
     },
@@ -91,8 +91,8 @@
         "iosProvs_": [],
         "addlPermissions_": "",
         "excludedLibraries_": "",
-        "cordovaCLIVersion_": "3.5",
-        "crosswalkVersion_": "stable",
+        "cordovaCLIVersion_": "?",
+        "crosswalkVersion_": "?",
         "appVersion_": "0.0.1",
         "runtime_": "Cordova 3.x",
         "appDescription_": "This demonstration application will use the JavaScript bridge to read the device's current accelerometer data and act on it.",
@@ -115,8 +115,8 @@
         "iosProvs_": [],
         "addlPermissions_": "",
         "excludedLibraries_": "",
-        "cordovaCLIVersion_": "3.5",
-        "crosswalkVersion_": "stable",
+        "cordovaCLIVersion_": "?",
+        "crosswalkVersion_": "?",
         "appVersion_": "0.0.1",
         "runtime_": "Crosswalk with Cordova 3.x",
         "appDescription_": "This demonstration application will use the JavaScript bridge to read the device's current accelerometer data and act on it.",
@@ -138,8 +138,8 @@
         "iosProvs_": [],
         "addlPermissions_": "",
         "excludedLibraries_": "",
-        "cordovaCLIVersion_": "3.5",
-        "crosswalkVersion_": "stable",
+        "cordovaCLIVersion_": "?",
+        "crosswalkVersion_": "?",
         "appVersion_": "0.0.1",
         "runtime_": "Cordova 3.x",
         "appDescription_": "This demonstration application will use the JavaScript bridge to read the device's current accelerometer data and act on it."
@@ -159,8 +159,8 @@
         "iosProvs_": [],
         "addlPermissions_": "",
         "excludedLibraries_": "",
-        "cordovaCLIVersion_": "3.5",
-        "crosswalkVersion_": "stable",
+        "cordovaCLIVersion_": "?",
+        "crosswalkVersion_": "?",
         "appVersion_": "0.0.0.1",
         "runtime_": "Cordova 3.x",
         "appDescription_": "This demonstration application will use the JavaScript bridge to read the device's current accelerometer data and act on it."
@@ -178,8 +178,8 @@
         "iosProvs_": [],
         "addlPermissions_": "",
         "excludedLibraries_": "",
-        "cordovaCLIVersion_": "3.5",
-        "crosswalkVersion_": "stable",
+				"cordovaCLIVersion_": "?",
+        "crosswalkVersion_": "?",
         "appVersion_": "1.0.0.0",
         "runtime_": "Cordova 3.x"
       }
