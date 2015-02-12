@@ -3,35 +3,18 @@
     "projectSettingsVersion": "1.2",
     "creationData": {
       "type": "Demo",
-      "createDefaultBuildConfigs": true,
       "projectTypeName": "com.intel.xdk.projecttype.jsapp",
-      "src": "https://edge-intel.s3.amazonaws.com/samples/production/sample-rollingcan/sample.zip",
-      "sourceDirectory": "www",
-			"projectGuid": "00000000-0000-0000-0000-000000000000",
-      "lastModifiedDate": 1407988671521,
-      "creationDate": 1407987762561
+      "src": "https://edge-intel.s3.amazonaws.com/jsapp/production/release-2014-ww51/sample-rollingcan/sample.zip",
+      "projectGuid": "00000000-0000-0000-0000-000000000000",
+      "lastModifiedDate": 1423517448683,
+      "creationDate": 1423516451926
     },
     "sourceDirectory": "www",
     "cordovaPluginsDirectory": "plugins",
     "startFile": "index.html",
     "projectFiles": {},
     "projectDirectories": {},
-    "libraries": [
-      {
-        "name": "Cordova",
-        "version": "2.9.0",
-        "data": {
-          "default": true
-        }
-      },
-      {
-        "name": "intelXDK",
-        "version": "4.0.0",
-        "data": {
-          "default": true
-        }
-      }
-    ],
+    "libraries": [],
     "cordovaPlugins": [
       {
         "id": "org.apache.cordova.device",
@@ -76,113 +59,118 @@
     "buildConfigurations": {
       "Android": {
         "platform_": "android",
+        "runtime_": "Cordova 3.x",
         "name_": "Android",
         "preferences_": {
           "Orientation": "portrait",
           "android-minSdkVersion": "10",
-          "android-targetedSdkVersion": "19"
+          "android-targetSdkVersion": "19",
+          "android-installLocation": "auto"
         },
         "isActive_": true,
-        "appName_": "RollingCan",
+        "appName_": "RollingCanAccelerometerDemonstration",
         "appID_": "xdk.sample.rollingcan",
-        "appAccess_": "*",
+        "appAccess_": [
+          {
+            "origin": "*"
+          }
+        ],
         "icons_": [],
         "splashes_": [],
-        "iosProvs_": [],
         "addlPermissions_": "",
         "excludedLibraries_": "",
+        "iosProvs_": [],
         "cordovaCLIVersion_": "?",
         "crosswalkVersion_": "?",
         "appVersion_": "0.0.1",
-        "runtime_": "Cordova 3.x",
         "appDescription_": "This demonstration application will use the JavaScript bridge to read the device's current accelerometer data and act on it.",
         "appVersionCode_": "1"
       },
       "Android-Crosswalk": {
         "platform_": "android",
+        "runtime_": "Crosswalk with Cordova 3.x",
         "name_": "Android-Crosswalk",
         "preferences_": {
           "Orientation": "portrait",
           "android-minSdkVersion": "14",
-          "android-targetedSdkVersion": "19"
+          "android-targetSdkVersion": "19",
+          "android-installLocation": "auto"
         },
         "isActive_": true,
-        "appName_": "RollingCan",
+        "appName_": "RollingCanAccelerometerDemonstration",
         "appID_": "xdk.sample.rollingcan",
-        "appAccess_": "*",
+        "appAccess_": [
+          {
+            "origin": "*"
+          }
+        ],
         "icons_": [],
         "splashes_": [],
-        "iosProvs_": [],
         "addlPermissions_": "",
         "excludedLibraries_": "",
+        "iosProvs_": [],
         "cordovaCLIVersion_": "?",
         "crosswalkVersion_": "?",
         "appVersion_": "0.0.1",
-        "runtime_": "Crosswalk with Cordova 3.x",
         "appDescription_": "This demonstration application will use the JavaScript bridge to read the device's current accelerometer data and act on it.",
         "appVersionCode_": "1"
       },
       "iOS": {
         "platform_": "ios",
+        "runtime_": "Cordova 3.x",
         "name_": "iOS",
         "preferences_": {
-          "ios-target": "5",
-          "Orientation": "portrait"
+          "ios-target": "6",
+          "Orientation": "portrait",
+          "ios-configuration": "adhoc"
         },
         "isActive_": true,
-        "appName_": "RollingCan",
+        "appName_": "RollingCanAccelerometerDemonstration",
         "appID_": "xdk.sample.rollingcan",
-        "appAccess_": "*",
+        "appAccess_": [
+          {
+            "origin": "*"
+          }
+        ],
         "icons_": [],
         "splashes_": [],
-        "iosProvs_": [],
         "addlPermissions_": "",
         "excludedLibraries_": "",
+        "iosProvs_": [],
         "cordovaCLIVersion_": "?",
         "crosswalkVersion_": "?",
         "appVersion_": "0.0.1",
-        "runtime_": "Cordova 3.x",
         "appDescription_": "This demonstration application will use the JavaScript bridge to read the device's current accelerometer data and act on it."
       },
       "Windows8": {
         "platform_": "windows8",
+        "runtime_": "Cordova 3.x",
         "name_": "Windows8",
         "preferences_": {
           "Orientation": "portrait"
         },
         "isActive_": true,
-        "appName_": "RollingCan",
+        "appName_": "RollingCanAccelerometerDemonstration",
         "appID_": "xdk.sample.rollingcan",
-        "appAccess_": "*",
+        "appAccess_": [
+          {
+            "origin": "*"
+          }
+        ],
         "icons_": [],
         "splashes_": [],
-        "iosProvs_": [],
         "addlPermissions_": "",
         "excludedLibraries_": "",
+        "iosProvs_": [],
         "cordovaCLIVersion_": "?",
         "crosswalkVersion_": "?",
         "appVersion_": "0.0.0.1",
-        "runtime_": "Cordova 3.x",
+        "appAuthor_": "Intel XDK",
         "appDescription_": "This demonstration application will use the JavaScript bridge to read the device's current accelerometer data and act on it."
-      },
-      "WindowsPhone8": {
-        "platform_": "wp8",
-        "name_": "WindowsPhone8",
-        "preferences_": {},
-        "isActive_": true,
-        "appName_": "RollingCan",
-        "appID_": "not.yet.specified",
-        "appAccess_": "*",
-        "icons_": [],
-        "splashes_": [],
-        "iosProvs_": [],
-        "addlPermissions_": "",
-        "excludedLibraries_": "",
-				"cordovaCLIVersion_": "?",
-        "crosswalkVersion_": "?",
-        "appVersion_": "1.0.0.0",
-        "runtime_": "Cordova 3.x"
       }
-    }
+    },
+    "gameAssetDirectory": "asset",
+    "gameMetadata": {},
+    "projectTags": []
   }
 }
