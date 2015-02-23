@@ -17,18 +17,18 @@ var masthead = null;
 var tabletop = null;
 
 //normally, global variables are discouraged. Here we use them for two reasons,
- //1) the accelerometer readings are coming potentially 100s of times per second
- // - allocating 15 variables 100s of times per second will be an unnecessary resource drain on slower device like gen1 iTouches
- //2) webkit transforms just make an animation happen - THEY DON'T change the actual CSS position of 
- //of an element that was animated. To keep track of the position a global variable is helpful (current_left, current_top)
- //although we could accomplish this differently with a little more work.
- //
- //NOTE - we said right above that webkit animations don't reposition the an element as reported by CSS. 
- //SO, why don't we then correct CSS's position? Because the can doesn't visually have time to repaint at it's pre-animation position
- //given that we are doing an new webkit animation every 100th of a second based on
- //accelerometer readings - so no need to 
- //invoke the extra overhead of telling the DOM that the element is being repositioned constantly by resetting the CSS
- //pixelLeft and pixelTop of the sodacan.
+//1) the accelerometer readings are coming potentially 100s of times per second
+// - allocating 15 variables 100s of times per second will be an unnecessary resource drain on slower device like gen1 iTouches
+//2) webkit transforms just make an animation happen - THEY DON'T change the actual CSS position of
+//of an element that was animated. To keep track of the position a global variable is helpful (current_left, current_top)
+//although we could accomplish this differently with a little more work.
+//
+//NOTE - we said right above that webkit animations don't reposition the an element as reported by CSS.
+//SO, why don't we then correct CSS's position? Because the can doesn't visually have time to repaint at it's pre-animation position
+//given that we are doing an new webkit animation every 100th of a second based on
+//accelerometer readings - so no need to
+//invoke the extra overhead of telling the DOM that the element is being repositioned constantly by resetting the CSS
+//pixelLeft and pixelTop of the sodacan.
 var label = null;
 var container = null;
 var current_left = 0;
@@ -50,23 +50,26 @@ var nextrot = 0;
 var vectangle = 0;
 
 //the following funciton handles the "physics" of how the can moves
- //calculating roation of the can and the direction of movement etc.
- //can be ignored if you only care about how to grab accelerometer readings
- //and do animations.
- //        //the can wants to slide in the direction of the slope of the table.
- //        //and wants to rotate such that the can is perpendicular to that direction (has reciprocal slope)
- //        //the label of the can want to rotate in the direction opposite to gravity. 
+//calculating roation of the can and the direction of movement etc.
+//can be ignored if you only care about how to grab accelerometer readings
+//and do animations.
+//        //the can wants to slide in the direction of the slope of the table.
+//        //and wants to rotate such that the can is perpendicular to that direction (has reciprocal slope)
+//        //the label of the can want to rotate in the direction opposite to gravity.
 
 
 function docanphysics(a) {
+
+    //alert(a.value);
+
     x_ispos = 1;
     y_ispos = 1;
 
     //take the abs tilt values so we don't
     //get stupid results while doing interim
     //calculations
-    absx = Math.abs(a.x);
-    absy = Math.abs(a.y);
+    absx = Math.abs(a.x/10); //a values are between 0 and 10 as returned by plugin
+    absy = Math.abs(a.y/10);
 
 
     if (absx < 0.1) {
@@ -104,19 +107,20 @@ function docanphysics(a) {
     //by adding the correct angle based on the quatrant
     // that the motion occurs in.
     //quadrant 1
-    if (x_ispos > 0 && y_ispos > 0) {
+    if (x_ispos < 0 && y_ispos < 0) {
         vectangle = 90 - vectangle;
     }
     //quadrant 2
-    else if (x_ispos > 0 && y_ispos < 0) {
+    else if (x_ispos < 0 && y_ispos > 0) {
         vectangle = 90 + vectangle;
     }
     //quadrant 3
-    else if (x_ispos < 0 && y_ispos < 0) {
+    else if (x_ispos > 0 && y_ispos > 0) {
         vectangle = 270 - vectangle;
+
     }
     //quadrant 4
-    else if (x_ispos < 0 && y_ispos > 0) {
+    else if (x_ispos > 0 && y_ispos < 0) {
         vectangle = 270 + vectangle;
     }
 
@@ -124,6 +128,8 @@ function docanphysics(a) {
     if (vectangle < 0) {
         vectangle = (vectangle + 360) % 360;
     }
+
+
 
     //allow some accelerated movement based on how tilted the device is
     dx = Math.floor(Math.log(roundNumber(absx) * 5));
@@ -135,10 +141,10 @@ function docanphysics(a) {
     x_ispos = 1;
     y_ispos = 1;
 
-    if (a.x < 0) {
+    if (a.x > 0) {
         x_ispos = -1;
     }
-    if (a.y < 0) {
+    if (a.y > 0) {
         y_ispos = -1;
     }
 
@@ -221,7 +227,8 @@ function suc(a) {
     //e.g. in the X plane -1 = tilted all the way left, 1 = tilted all the way right.
     //e.g. in the Y plane -1 = tilted all the way left, 1 = tilted all the way right.
     //  document.getElementById('accel_x').innerHTML = "a.x = " + a.x + ", a.y = " + a.y;
-	docanphysics(a);
+
+    docanphysics(a);
 
     //make sure the can isn't off the screen
     current_left = Math.max(current_left, 0);
@@ -243,9 +250,17 @@ function suc(a) {
     //basically, we're going to slide and rotate the can around on the screen based on the physics
     //computed in the previous funciton. The animation calls are really fairly simple ...
     //need to check that container and label have been initialized in case deviceready happens before load
+    //(polyfill) intel.xdk.iswin8 is not defined on all platforms - define if it is missing
+    if (intel.xdk.iswin8 === undefined) {
+        intel.xdk.iswin8 = false;
+    }
+    //(polyfill) intel.xdk.iswp8 is not defined on all platforms - define if it is missing
+    if (intel.xdk.iswp8 === undefined) {
+        intel.xdk.iswp8 = false;
+    }
     //use a variable to access the platform-appropriate transform property
     var transformProp = 'webkitTransform';
-    if (device.platform.indexOf("Win") !== -1) {
+    if (intel.xdk.iswin8 || intel.xdk.iswp8) {
         transformProp = 'transform';
     }
 
@@ -258,25 +273,27 @@ function suc(a) {
 }
 
 
-var fail = function() {
-    alert('onError!');
+var fail = function()
+{
+//alert('onError!');
 };
 
 var watchAccel = function() {
 
 
-        var opt = {};
-        //opt.frequency = 5;
-        opt.frequency = 5000;
-        //var timer = intel.xdk.accelerometer.watchAcceleration(suc, opt);
-        var timer = navigator.accelerometer.watchAcceleration(suc, fail, opt);
+    var opt = {frequency:5};
+    //opt.frequency = 5;
+    //var timer = intel.xdk.accelerometer.watchAcceleration(suc, opt);
+    //opt.frequency = 5000;
+    var timer = navigator.accelerometer.watchAcceleration(suc, fail, opt);
+};
 
-    };
+
 
 function onDeviceReady() {
     //use viewport
     var landscapewidth = 1360;
-    //intel.xdk.display.useViewport(portrait_width, landscapewidth);
+    intel.xdk.display.useViewport(portrait_width, landscapewidth);
 
     //lock orientation
     intel.xdk.device.setRotateOrientation("portrait");
@@ -286,12 +303,12 @@ function onDeviceReady() {
     intel.xdk.device.managePower(true, false);
 
     //hide splash screen
-    navigator.splashscreen.hide();;
+    intel.xdk.device.hideSplashScreen();
 
     watchAccel();
 }
 
-document.addEventListener("deviceready", onDeviceReady, false);
+document.addEventListener("intel.xdk.device.ready", onDeviceReady, false);
 
 function onBodyLoad() {
     metatag = document.getElementById("meta_view");
