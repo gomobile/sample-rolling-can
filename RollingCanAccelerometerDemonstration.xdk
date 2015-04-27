@@ -65,6 +65,15 @@
         "paramvals": {},
         "dependsOn": [],
         "dependedBy": []
+      },
+      {
+        "id": "org.apache.cordova.device-motion",
+        "version": "?",
+        "selectedState": "Included",
+        "data": {},
+        "paramvals": {},
+        "dependsOn": [],
+        "dependedBy": []
       }
     ],
     "serviceMethods": [],
