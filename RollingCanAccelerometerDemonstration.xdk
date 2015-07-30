@@ -84,7 +84,7 @@
                 "name_": "Android",
                 "preferences_": {
                     "Orientation": "portrait",
-                    "android-minSdkVersion": "10",
+                    "android-minSdkVersion": "14",
                     "android-targetSdkVersion": "19",
                     "android-installLocation": "auto"
                 },
